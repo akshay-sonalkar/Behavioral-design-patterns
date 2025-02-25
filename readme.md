@@ -40,3 +40,5 @@ This project demonstrates various behavioral design patterns in Java. Each patte
 
 6. **Template Method Pattern**
     - **Description**: Defines the skeleton of an algorithm in a method, deferring some steps to subclasses. It lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.
+7. **Chain of Responsibility Pattern**
+    - **Description**: Passes a request along a chain of handlers. Upon receiving a request, each handler decides either to process the request or to pass it along the chain.
