@@ -1,17 +1,15 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        SupportHandler level1 = new Level1Support();
+        SupportHandler level2 = new Level2Support();
+        SupportHandler level3 = new Level3Support();
 
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        level1.setNextHandler(level2);
+        level2.setNextHandler(level3);
 
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
-        }
+        level1.handleRequest("Level 1");
+        level1.handleRequest("Level 2");
+        level1.handleRequest("Level 3");
+        level1.handleRequest("Unknown Level");
     }
 }
